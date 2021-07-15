@@ -255,6 +255,7 @@
         width: 5%;
         padding: 20px;
         background-color: #e62b1e;
+        opacity: 0.7;
         transition: 0.3s;
         font-size: 16px;
     }
