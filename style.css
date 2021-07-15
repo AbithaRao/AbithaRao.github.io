@@ -1,0 +1,266 @@
+* {
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    background-color: black;
+}
+
+#nav-container {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    background-color: #e62b1e;
+    transition: top 0.3s;
+}
+
+.navbar {
+    background-color: #e62b1e;
+    color:white;
+    display: grid;
+    grid-template-columns: 0.2fr auto 0.6fr;
+    align-items: center;
+    height: 80px;
+    width: 90%;
+    max-width: 1720px;
+    margin: 0 auto;
+}
+
+#logo {
+    color:white;
+    font-size: 30px;
+    background-color: #e62b1e;
+    justify-self: start;
+    margin-left: 20px;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    list-style: none;
+    margin-top: 0;
+    background-color: #e62b1e;
+    text-align: center;
+    height: 80px;
+    width: 70%;
+    align-items: center;
+    justify-self: end;
+}
+
+.nav-links {
+    display: block;
+    margin-left: 0;
+    background-color: #e62b1e;
+    color:white;
+    text-decoration: none;
+}
+
+.nav-links:hover {
+    color: black;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #e62b1e;
+    background:white;
+}
+
+#sidenav a{
+    background-color: #e62b1e;
+    list-style: none;
+    position: fixed;
+    left: -80px;
+    transition: all 0.5s;
+    padding: 18px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 10px 10px 0;
+    margin-top: 10%;
+    align-items: left;
+}
+
+#ed4 {
+    top: 160px; 
+}
+ 
+#ed3 {
+    top: 220px;
+}
+
+#ed2 {
+    top: 280px;
+}
+
+#ed1 {
+    top: 340px;
+}
+
+#sidenav a:hover {
+    left: 0;
+    opacity: 0.7;
+    align-items: right;
+}
+
+.time {
+    color: white;
+    padding-top: 120px;
+    margin-left: 80px;
+}
+
+.time h1 {
+    color: #e62b1e;
+    padding-top: 10px;
+    margin-left: -80px;
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 30px;
+}
+
+.time h2{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 25px;
+}
+
+.time p{
+    font-size: 16px;
+}
+
+.event {
+    display: inline-block;
+    padding-bottom: 30px;
+} 
+
+.poster {
+    float: left;
+    width: 400px;
+    padding-right: 20px;
+}
+
+.text {
+    padding-top: 30px;
+    padding-right: 20px;
+}
+
+.watch {
+    font-size: 15px;
+    padding-top: 20px;
+    background-color: #e62b1e;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: none;
+}
+.watch:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.3s ease-out;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    #nav-container {
+        position: absolute;
+        background: #e62b1e;
+        z-index: 1;
+    }
+    
+    .nav-menu {
+        position: absolute;
+        display: grid;
+        grid-template-columns: auto;
+        background: #e62b1e;
+        margin: 0;
+        width: 100%;
+        top: 80px;
+        padding: 0;
+        left: -100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+
+    .navbar { 
+        background: #e62b1e;
+        width: 100%;
+    }
+
+    #logo {
+        font-size: 25px;
+        margin-left: 20px;
+        margin-bottom: 0;
+    }
+
+    .nav-menu.active {
+        background: #e62b1e;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links {
+        text-align: center;
+        background: #e62b1e;
+        line-height: 60px;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-links:hover {
+        background-color: black;
+        color: white;
+        transition: all 0.4s ease-out;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+    }
+    
+    .menu-toggle {
+        background-color: #e62b1e;
+    }
+
+    .menu-toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    #sidenav a {
+        position: fixed;
+        left: 0;
+        width: 5%;
+        padding: 20px;
+        background-color: #e62b1e;
+        transition: 0.3s;
+        font-size: 16px;
+    }
+
+    .poster {
+        width: 90%;
+        padding-bottom: 20px;
+    }
+}
